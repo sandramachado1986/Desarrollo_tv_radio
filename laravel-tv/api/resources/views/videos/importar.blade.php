@@ -14,6 +14,17 @@
         <form role="form" action="{{route('videos-jsonimportado')}}" method="POST"novalidate enctype="multipart/form-data">
         @csrf
         <div class="form-group">
+    <label for="exampleInput">
+    Categorías
+    </label>
+    <select class="form-control" name="id_categoria" aria-label=".form-select-lg example">
+    <option selected>Seleccione una Categoría</option>
+    @foreach ($categorias as $categoria)
+    <option value="{{$categoria['id']}}">{{$categoria['titulo']}}</option>
+    @endforeach
+    </select>
+    </div>
+        <div class="form-group">
         <label class="control-label">Importar Json</label>
         <input   class="form-control @error('filejson')is-invalid @enderror" id="filejson" type="file" name="filejson" accept="application/json" value="{{old('file')}}"/>
       @error('filejson')
@@ -23,19 +34,7 @@
         </strong></span> 
         @enderror
         </div>
-           <div class="form-group">
-        <label class="control-label">Importar Json</label>
-        <input   class="form-control @error('filejson')is-invalid @enderror" id="categoria" type="file" name="categoria" accept="application/json" value="{{old('file')}}"/>
-      
-
-        @error('filejson')
-        <span class="invalid-feedback ">
-        <strong class="alert-danger">
-        {{$message}}
-        </strong></span> 
-        @enderror
-        </div>
-
+        
        
 
         <div class="control-group">

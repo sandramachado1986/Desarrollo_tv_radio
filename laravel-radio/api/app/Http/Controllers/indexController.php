@@ -20,8 +20,9 @@ class indexController extends Controller
         $dia_viernes = programacion::obtener_programacion_x_dia("Viernes");
         $dia_sabado = programacion::obtener_programacion_x_dia("Sábado");
         $dia_domingo = programacion::obtener_programacion_x_dia("Domingo");
-        return view('frontend.programacion', ['programacion' => $programacion, 'programacionLunes' => $dia_lunes, 'programacionMartes' => $dia_martes, 'programacionMiercoles' => $dia_miercoles, 'programacionJueves' => $dia_jueves, 'programacionViernes' => $dia_viernes, 'programacionSabado' => $dia_sabado, 'programacionDomingo' =>
+        return view('frontend.inicio', ['programacion' => $programacion, 'programacionLunes' => $dia_lunes, 'programacionMartes' => $dia_martes, 'programacionMiercoles' => $dia_miercoles, 'programacionJueves' => $dia_jueves, 'programacionViernes' => $dia_viernes, 'programacionSabado' => $dia_sabado, 'programacionDomingo' =>
         $dia_domingo]);
        
     }
+    
 }

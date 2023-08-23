@@ -16,7 +16,8 @@ class videosController extends Controller
 	}
     public function importar()
     {
-        return view('videos.importar');
+        $categorias = categorias::all();
+        return view('videos.importar', compact('categorias'));
     }
  
     public function jsonimportado(Request $request)
@@ -27,6 +28,7 @@ class videosController extends Controller
         $ruta = $_FILES['filejson']['tmp_name'];
         $data = file_get_contents($ruta);
         $videos_importar = json_decode($data, true);
+        $id_categoria = $request->id_categoria;
       
       $items= $videos_importar["items"];
         $hay = count($items);
@@ -56,6 +58,8 @@ class videosController extends Controller
                     $video->link_img = $imgthum;
                     $video->link_id = $videoid;
                     $video->link_video = $link_video;
+                    $video->id_categoria =$id_categoria;
+
                     $video->save();
                 } else {
                     echo "ocurrió un error no pude importar";

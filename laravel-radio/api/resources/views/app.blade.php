@@ -38,11 +38,12 @@
             <a class="navbar-brand" href="#">Administración</a>
           </div>
           <ul class="nav navbar-nav">
-          <li class="active"><a href="../public">Ver Sitio</a></li>
+          <li class="active"><a href="./">Ver Sitio</a></li>
           <li><a href="{!!URL::to('institucional')!!}">Institucional</a></li>
           <li><a href="{!!URL::to('contactos')!!}">contactos</a></li>
           <li><a href="{!!URL::to('programas')!!}">Programas</a></li>
           <li><a href="{!!URL::to('podcast')!!}">Podcast</a></li>
+          <li><a href="{!!URL::to('inicio')!!}">Inicio</a></li>
           <li><a href="{!!URL::to('cargar_programacion')!!}">Cargar Programación </a></li>
           <li><a href="{!!URL::to('usuarios')!!}">Usuarios</a></li>
 

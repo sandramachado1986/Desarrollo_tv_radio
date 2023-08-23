@@ -43,6 +43,8 @@ Route::get('/show_radiovivo', podcastController::class . '@show_radio_vivo')->na
 Route::post('/contactos', [contactosController::class, 'store']);
 Route::post('/institucional', [institucionalController::class, 'store']);
 Route::get('/programas', programasController::class . '@index')->name('programas');
+Route::get('/inicio', indexController::class . '@index')->name('inicio');
+
 Route::get('/programas/create', programasController::class . '@create')->name('programas.create');
 Route::get('/programas/{id}', [programasController::class, 'show'])->name('programas-edit');
 Route::get('show_programa_contextual/{id}', [programasController::class, 'show_programa_contextual'])->name('show_programa_contextual');
