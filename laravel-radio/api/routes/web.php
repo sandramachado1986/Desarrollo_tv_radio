@@ -9,6 +9,7 @@ use App\Http\Controllers\programasController;
 use App\Http\Controllers\programacionController;
 use App\Http\Controllers\podcastController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\inicio_slideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,17 @@ Route::get('/show_radiovivo', podcastController::class . '@show_radio_vivo')->na
 Route::post('/contactos', [contactosController::class, 'store']);
 Route::post('/institucional', [institucionalController::class, 'store']);
 Route::get('/programas', programasController::class . '@index')->name('programas');
+
 Route::get('/inicio', indexController::class . '@index')->name('inicio');
+//inicio_slide_backend
+Route::get('/inicio_slide', inicio_slideController::class . '@index')->name('inicio_slide');
+
+Route::get('/inicio_slide/create', inicio_slideController::class . '@create')->name('inicio_slide.create');
+Route::get('/inicio_slide/{id}', [inicio_slideController::class, 'show'])->name('inicio_slide-edit');
+Route::patch('/inicio_slide/{id}', [inicio_slideController::class, 'update'])->name('inicio_slide-update');
+Route::post('/inicio_slide', [inicio_slideController::class, 'store']);
+Route::delete('/inicio_slide/{id}', [inicio_slideController::class, 'destroy'])->name('inicio_slide-destroy');
+
 
 Route::get('/programas/create', programasController::class . '@create')->name('programas.create');
 Route::get('/programas/{id}', [programasController::class, 'show'])->name('programas-edit');

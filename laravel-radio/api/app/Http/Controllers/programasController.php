@@ -42,7 +42,7 @@ class programasController extends Controller
         $programa->titulo = $request->titulo;
         $programa->imagen = $imagenPath ;
         $programa->save();
-        return redirect()->route('programas')->with('Exito!', 'El programa se ha borrado Exitosamente');
+        return redirect()->route('programas')->with('Exito!', 'El programa se ha guardado Exitosamente');
     }
     public function show($id)
     {

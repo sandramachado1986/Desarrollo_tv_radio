@@ -37,7 +37,7 @@
 <input type="radio" id="reproductor" name="reproductor" value="1"    @if ($videos->reproductor == 1){{ 'checked '  }} @endif onclick="habilitarText1(this)">
      
 Link Id
-<input  class="form-control @error('link_id')is-invalid @enderror" id="txt1"name="link_id" value="{{$videos->link_id }}"  type="text"  />
+<input  class="form-control @error('link_id')is-invalid @enderror" @if ($videos->reproductor == 2){{'disabled';  }} @endif  id="txt1"name="link_id" value="@if ($videos->reproductor == 1){{$videos->link_id;  }} @endif"  type="text"  />
 @error('link_id')
 <span class="invalid-feedback ">
 <strong class="alert-danger">
@@ -47,7 +47,7 @@ Link Id
 </div>
 <div class="control-group">
        Link Youtube
-      <input  class="form-control @error('link_video')is-invalid @enderror" id="txt3"name="link_video" value="{{$videos->link_video }}" type="text"  />
+      <input  class="form-control @error('link_video')is-invalid @enderror"  @if ($videos->reproductor == 2){{'disabled';  }} @endif id="txt3"name="link_video"  value="@if ($videos->reproductor == 1){{$videos->link_video;  }} @endif" type="text"  />
       @error('link_video')
       <span class="invalid-feedback ">
       <strong class="alert-danger">
@@ -57,7 +57,7 @@ Link Id
 </div>
             <div class="control-group">
             link imagen
-            <input class="form-control @error('link_img')is-invalid @enderror" id="txt5"name="link_img" value="{{ $videos->link_img }}"  type="text"  />
+            <input class="form-control @error('link_img')is-invalid @enderror" @if ($videos->reproductor == 2){{'disabled';  }} @endif id="txt5"name="link_img" value="@if ($videos->reproductor == 1){{$videos->link_img;  }} @endif"  type="text"  />
              @error('link_img')
             <span class="invalid-feedback ">
             <strong class="alert-danger">
@@ -71,7 +71,7 @@ Link Id
             </label>
             <div class="control-group">
             link video
-            <input  class="form-control @error('link_video')is-invalid @enderror" id="txt2"name="link_video2" value="@if ($videos->reproductor == 2){{$videos->link_video }}@endif"  type="text"  />
+            <input  class="form-control @error('link_video')is-invalid @enderror" id="txt2" @if ($videos->reproductor == 1){{'disabled';  }} @endif name="link_video2" value="@if ($videos->reproductor == 2){{$videos->link_video }}@endif"  type="text"  />
         @error('link_video2')
         <span class="invalid-feedback ">
         <strong class="alert-danger">
@@ -81,7 +81,7 @@ Link Id
         </div>
             <div class="control-group">
             link imagen
-            <input  class="form-control @error('link_img')is-invalid @enderror" id="txt4"name="link_img2" value="@if ($videos->reproductor == 2){{ $videos->link_img }}@endif" type="text"  />
+            <input  class="form-control @error('link_img')is-invalid @enderror" id="txt4"name="link_img2" @if ($videos->reproductor == 1){{'disabled';  }} @endif value="@if ($videos->reproductor == 2){{ $videos->link_img }}@endif" type="text"  />
             @error('link_img2')
             <span class="invalid-feedback ">
             <strong class="alert-danger">

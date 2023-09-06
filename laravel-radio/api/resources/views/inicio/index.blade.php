@@ -20,7 +20,7 @@
     <div class="col-md-2">
         <strong>Nuevo slide</strong>
         <button type="button" class="btn btn-success">
-            <a   href={{route('slide.create')}}><i class="fa-solid fa-plus">
+            <a   href={{route('inicio_slide.create')}}><i class="fa-solid fa-plus">
                 </i></a>
         </button>
     </div>
@@ -40,6 +40,7 @@
         <tr>
         <th>titulo</th>
         <th>descripcion</th>
+        <th>imagen</th>
     
         <th>
         Editar
@@ -50,24 +51,25 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($programas as $programas)
+        @foreach ($inicio_slide as $inicio_slide)
         <tr>
-        <td>{{$programas->titulo}}</td>
+        <td>{{$inicio_slide->titulo}}</td>
      
         <td>
-        {!! Str::limit($programas->descripcion,30, ' ...') !!}
+        {!! Str::limit($inicio_slide->descripcion,30, ' ...') !!}
         </td>
 
+        <td>{{$inicio_slide->imagen}}</td>
         <td>
 
-        <form action="{{ route('programas-edit', [$programas->id]) }}" method="patch">
+        <form action="{{ route('inicio_slide-edit', [$inicio_slide->id]) }}" method="patch">
         @method('patch')
         @csrf
         <button class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></button>
         </form>
 
         </td>
-        <td><a href="" class="href"><form action="{{ route('programas-destroy', [$programas->id]) }}" method="POST">
+        <td><a href="" class="href"><form action="{{ route('inicio_slide-destroy', [$inicio_slide->id]) }}" method="POST">
         @method('DELETE')
         @csrf
         <button class="btn btn-danger "><i class="fa-solid fa-trash-can"></i></button>

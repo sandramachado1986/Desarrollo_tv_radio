@@ -43,7 +43,7 @@
           <li><a href="{!!URL::to('contactos')!!}">contactos</a></li>
           <li><a href="{!!URL::to('programas')!!}">Programas</a></li>
           <li><a href="{!!URL::to('podcast')!!}">Podcast</a></li>
-          <li><a href="{!!URL::to('inicio')!!}">Inicio</a></li>
+          <li><a href="{!!URL::to('inicio_slide')!!}">Slide Inicio</a></li>
           <li><a href="{!!URL::to('cargar_programacion')!!}">Cargar Programación </a></li>
           <li><a href="{!!URL::to('usuarios')!!}">Usuarios</a></li>
 
