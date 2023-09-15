@@ -3,7 +3,7 @@
 
 	
 <h2>Contactos</h2>
-<p>{{$contactos->descripcion}}</p>
+<p>{!!$contactos->descripcion!!}</p>
         
 
   @endsection

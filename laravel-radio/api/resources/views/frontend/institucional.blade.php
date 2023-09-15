@@ -3,8 +3,8 @@
 
 
 	
-<h2>{{$institucional->titulo}}</h2>
-<p>{{$institucional->descripcion}}</p>
+<h2>{!!$institucional->titulo!!}</h2>
+<p>{!!$institucional->descripcion!!}</p>
         
 		
 

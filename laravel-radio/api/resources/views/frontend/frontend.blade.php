@@ -68,7 +68,7 @@
 		<div class="col-md-1">
 		</div>
 		<div class="col-md-2" style="padding-top:3%;padding-bottom:2%;">
-	<a href="/radio/public/" > <img class="img-logo-radio"  style ="width:200px;"alt="Radio Universidad" src="/img/radiohorizontal.png"></a>
+	<a href="./" > <img class="img-logo-radio"  style ="width:200px;"alt="Radio Universidad" src="/img/radiohorizontal.png"></a>
 		</div>
 		<div class="col-md-1">
 		</div>
@@ -91,7 +91,7 @@
 			<div class="btn-group" role="group">
 				
 				<button class="btn btn-secondary" type="button" style="border:none;background-color: #476e96;color:white;">
-					<a target="_blank" style="border:none;background-color: #476e96;color:white; text-decoration:none;"href="{!!URL::to('show_institucional')!!}">INSTITUCIONAL</a>
+					<a target="_blank" style="border:none;background-color: #476e96;color:white; text-decoration:none;"href="{!!URL::to('show_institucional')!!}">FM 95.7</a>
 				</button> 
 				<button class="btn btn-secondary" type="button" style="border:none;background-color: #476e96;color:white;">
 					<a target="_blank" style="border:none;background-color: #476e96;color:white; text-decoration:none;"href="{!!URL::to('show_contactos')!!}">CONTACTOS</a>

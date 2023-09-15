@@ -80,7 +80,7 @@
             <a class="navbar-brand" href="#"></a>
           </div>
           <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Admin</a></li>
+        
           <li><a href="{!!URL::to('videos')!!}">Videos</a></li>
           <li><a href="{!!URL::to('categorias')!!}">Categorias</a></li>
           <li><a href="{!!URL::to('imagenes')!!}">Imágenes</a></li>
@@ -88,6 +88,7 @@
           <li><a href="{!!URL::to('cargar_programacion')!!}">Cargar Programación</a></li>
           <li><a href="{!!URL::to('videos/importar')!!}">Importar Videos</a></li>
           <li><a href="{!!URL::to('listaVideos')!!}">Tarjetas de Categorias</a></li>
+          <li><a href="{!!URL::to('modals')!!}">Modals</a></li>
           <li><a href="{!!URL::to('usuarios')!!}">Usuarios</a></li>
           <li><a href="{!!URL::to('videos/vivo')!!}">Vivo</a></li>
           <li><a  href="{!!URL::to('logout')!!}">Cerrar Sesión</a>

@@ -10,6 +10,7 @@ use App\Http\Controllers\programacionController;
 use App\Http\Controllers\listaVideosController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\modalsController;
 
 
 
@@ -23,6 +24,8 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('modals', modalsController::class);
+
 Route::get('/staff', indexController::class . '@CargarStaff')->name('staff');
 Route::get('/',indexController::class . '@CargarFrontend');
 Route::get('/grilla', indexController::class . '@CargarGrilla')->name('grilla');
