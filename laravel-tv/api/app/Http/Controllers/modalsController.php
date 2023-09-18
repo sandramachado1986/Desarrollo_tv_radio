@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\modals;
+use Illuminate\Support\Facades\Storage;
+
 
 
 
@@ -15,12 +17,35 @@ class modalsController extends Controller
         $modals = modals::all();
         return view('modals.index', compact('modals'));
     }
+    public function create()
+    {
+        return view('modals.create');
+    }
 
 
     public function store(Request $request)
-{
-    // Valida y almacena la nueva migración
-}
+    {
+        $request->validate([
+            'titulo' => 'required|min:3',
+            'descripcion' => 'required|min:3',
+            'imagen' => 'required|image|max:2048',
+        ]);
+    
+        // Almacenar la imagen en storage/app/public
+        $imagenPath = $request->file('imagen')->store('');
+    
+      
+        $modal = new Modals;
+        $modal->titulo = $request->titulo;
+        $modal->descripcion = $request->descripcion;
+        $modal->id_categoria = 1;
+        
+        $modal->imagen = $imagenPath; // Usar la ruta pública
+        $modal->save();
+    
+        return redirect()->route('modals')->with('success', 'El modal ha sido cargado exitosamente');
+    }
+    
 
 public function show($id)
 {
@@ -43,4 +68,6 @@ public function destroy($id)
 {
     // Elimina la migración
 }
+
+
 }

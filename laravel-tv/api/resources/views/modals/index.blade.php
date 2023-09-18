@@ -66,7 +66,7 @@
         </form>
         </td>
         <td><a  class="href">
-            <form action={{ route('imodals-destroy', [$imagen->id]) }} method="POST">
+            <form action={{ route('modals-destroy', [$modal->id]) }} method="POST">
         @method('DELETE')
         @csrf
         <button class="btn btn-danger "><i class="fa-solid fa-trash-can"></i></button>
