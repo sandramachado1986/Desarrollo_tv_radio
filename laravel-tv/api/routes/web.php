@@ -24,14 +24,17 @@ use App\Http\Controllers\modalsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/modals/create', modalsController::class . '@create')->name('modals.create');
+Route::post('/modals', [modalsController::class, 'store']);
+
 Route::get('/modals', modalsController::class . '@index')->name('modals');
 Route::get('/modals/{id}', [modalsController::class, 'show'])->name('modals-edit');
 Route::delete('/modals/{id}', [modalsController::class, 'destroy'])->name('modals-destroy');
+Route::patch('/modals/{id}', [imagenesController::class, 'update'])->name('modals-update');
 
 
 
-Route::get('/modals/create', modalsController::class . '@create')->name('modals.create');
-Route::post('/modals', [modalsController::class, 'store']);
+
 
 
 Route::get('/staff', indexController::class . '@CargarStaff')->name('staff');

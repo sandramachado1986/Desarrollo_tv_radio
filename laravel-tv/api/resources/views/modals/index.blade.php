@@ -56,7 +56,7 @@
         <td>
         {!! Str::limit($modal->titulo,10, ' ...') !!}
         </td>
-        <td>{{$modal->file}}</td>
+        <td>{{$modal->imagen}}</td>
         
        <td>
         <form action="{{ route('modals-edit', [$modal->id]) }}" method="patch">
