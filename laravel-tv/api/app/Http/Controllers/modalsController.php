@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\modals;
+use App\Models\categorias;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -19,7 +20,8 @@ class modalsController extends Controller
     }
     public function create()
     {
-        return view('modals.create');
+        $categorias = categorias::all();
+        return view('modals.create', compact('categorias'));
     }
 
 
@@ -38,12 +40,11 @@ class modalsController extends Controller
         $modal = new Modals;
         $modal->titulo = $request->titulo;
         $modal->descripcion = $request->descripcion;
-        $modal->id_categoria = 1;
+        $modal->id_categoria = $request->id_categoria;
         
         $modal->imagen = $imagenPath; // Usar la ruta pública
-        $modal->save();
-    
-        return redirect()->route('modals')->with('success', 'El modal ha sido cargado exitosamente');
+       $modal->save();
+     return redirect()->route('modals')->with('success', 'El modal ha sido cargado exitosamente');
     }
     
 

@@ -39,7 +39,17 @@ Descripcion
 </strong></span> 
 @enderror
 </div>
-
+<div class="form-group">
+    <label for="exampleInput">
+    Categorías
+    </label>
+    <select class="form-control" name="id_categoria" aria-label=".form-select-lg example">
+    <option selected>Seleccione una Categoría</option>
+    @foreach ($categorias as $categoria)
+    <option value="{{$categoria['id']}}">{{$categoria['titulo']}}</option>
+    @endforeach
+    </select>
+    </div>
 
 <div class="form-group">
 <label class="control-label">Imagen</label>
