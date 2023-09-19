@@ -23,16 +23,31 @@ Titulo
 </div>
 <div class="form-group">
 <label for="exampleInput">
-Titulo
+Descripcion
 </label>
-<input type="text" class="form-control @error('titulo')is-invalid @enderror" id="titulo"name="titulo" value="{{$modals->titulo}}"/>
-@error('titulo')
+<input type="text" class="form-control @error('descripcion')is-invalid @enderror" id="descripcion"name="descripcion" value="{{$modals->descripcion}}"/>
+@error('descripcion')
 <span class="invalid-feedback ">
 <strong class="alert-danger">
 {{$message}}
 </strong></span> 
 @enderror
 </div>
+<div class="form-group">
+<label for="id_categoria" class="form-label">Categorias</label>
+    <select name="id_categoria" class="form-select">
+    <option >Seleccione una Categoría</option>
+    @foreach ($categorias as $categoria)
+
+    @if ($categoria->id== $modals->id_categoria)
+    <option value="{{$categoria->id}}" selected>{{$categoria->titulo}}</option>
+    @else
+    <option value="{{$categoria->id}}" >{{$categoria->titulo}}</option>
+    @endif
+  @endforeach
+    </select>
+    </div>
+    
 
 <div class="form-group">
 <label class="control-label">Imagen</label>

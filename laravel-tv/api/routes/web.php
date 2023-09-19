@@ -30,7 +30,7 @@ Route::post('/modals', [modalsController::class, 'store']);
 Route::get('/modals', modalsController::class . '@index')->name('modals');
 Route::get('/modals/{id}', [modalsController::class, 'show'])->name('modals-edit');
 Route::delete('/modals/{id}', [modalsController::class, 'destroy'])->name('modals-destroy');
-Route::patch('/modals/{id}', [imagenesController::class, 'update'])->name('modals-update');
+Route::patch('/modals/{id}', [modalsController::class, 'update'])->name('modals-update');
 
 
 

@@ -35,15 +35,12 @@ class modalsController extends Controller
     
         // Almacenar la imagen en storage/app/public
         $imagenPath = $request->file('imagen')->store('');
-    
-      
         $modal = new Modals;
         $modal->titulo = $request->titulo;
         $modal->descripcion = $request->descripcion;
         $modal->id_categoria = $request->id_categoria;
-        
         $modal->imagen = $imagenPath; // Usar la ruta pública
-       $modal->save();
+      // $modal->save();
      return redirect()->route('modals')->with('success', 'El modal ha sido cargado exitosamente');
     }
     
@@ -51,7 +48,9 @@ class modalsController extends Controller
 public function show($id)
 {
     $modals = modals::find($id);
-    return view('modals.show', compact('modals'));
+    $categorias = categorias::all();
+    return view('modals.show', ['modals' => $modals, 'categorias' => $categorias]);
+
 }
 
 public function edit($id)
@@ -62,12 +61,29 @@ public function edit($id)
 
 public function update(Request $request, $id)
 {
-    // Valida y actualiza la migración existente
+    $modal = modals::find($id);
+    $modal->titulo = $request->titulo;
+    $modal->descripcion = $request->descripcion;
+    $modal->id_categoria = $request->id_categoria;
+    if (!empty($request->file)) {
+        $img = $request->file('imagen')->store('');
+        $url = Storage::url($img);
+        $modal->imagen = $img;
+    }
+   
+    $modal->save();
+    return redirect()->route('modals')->with('success', 'el modal ha sido modificado Exitosamente');
+
+    
 }
 
 public function destroy($id)
 {
-    // Elimina la migración
+    $modals = modals::find($id);
+        $url= str_replace('storage','public',$modals->file);
+        Storage::delete($url);
+        $modals->delete();
+        return redirect()->route('modals')->with('success', 'el modal ha sido borrado exitosamente');
 }
 
 
