@@ -34,12 +34,22 @@ inner join horarios h on h.id = programacion.id_horario
 inner join dias  d  on d.id = programacion.id_dia where programacion.activo=0
 ORDER BY programacion.id ASC */
         $programacion = DB::table('programacion')
-            ->select("programacion.id_programa as id_programa", "programas.imagen as imagen", "horarios.descripcion as horario", "programacion.id as id", "dias.descripcion as dia", "programas.titulo as programa", "programas.descripcion as descripcion_programa")
+            ->select("programacion.id_programa as id_programa", "programas.imagen as imageUrl", "horarios.descripcion as time", "programacion.id as id", "dias.descripcion as day", "programas.titulo as show", "programas.descripcion as staff")
             ->join('horarios', 'horarios.id', '=', 'programacion.id_horario')
             ->join('dias', 'dias.id', '=', 'programacion.id_dia')
             ->join('programas', 'programas.id', '=', 'programacion.id_programa')
             ->get();
-        return $programacion;
+            return $programacion;
+
+    /*
+            // Convertir el resultado a formato JSON
+    $json_data = json_encode($programacion);
+    // Escribir los datos JSON en un archivo
+       // Corregir la ruta de la imagen
+       $json_data = str_replace('\/storage\/', '/img/', $json_data);
+     $file_path = resource_path('views/frontend_radio_news/test.json');
+    file_put_contents($file_path, $json_data);*/
+
     }
     public static function obtener_programacion_x_dia($dia)
     {
@@ -67,6 +77,7 @@ ORDER BY programacion.id ASC */
             ->where('programacion.visible', '=', 0)
             ->where('programacion.activo', '=', 0)
             ->get();
+        
         return $programacion;
     }
 }

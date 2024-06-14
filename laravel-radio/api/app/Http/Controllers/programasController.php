@@ -23,26 +23,26 @@ class programasController extends Controller
     }
     public function store(Request $request)
     {
-        $request->validate(
-            [
-                'descripcion' => 'required|min:3',
-                'titulo' => 'required|min:3',
-                'imagen' => 'required|image|max:2048',
-            ]
-        );
-        
-        $imagenPath = $request->file('imagen')->store('img');
-        $nombreArchivo = basename($imagenPath);
-        $imagenPublicPath = 'public/img/' . $nombreArchivo;
-        Storage::move($imagenPath, $imagenPublicPath);
-
-
-       $programa = new programas;
+        $request->validate([
+            'descripcion' => 'required|min:3',
+            'titulo' => 'required|min:3',
+            'imagen' => 'required|image|max:2048',
+        ]);
+    
+        $imagenPath = $request->file('imagen')->storeAs('public/img', $request->file('imagen')->getClientOriginalName());
+    
+        // Ahora, $imagenPath contendrá la ruta donde se almacenó la imagen en storage/app/public/img
+    
+        // Si deseas guardar la ruta relativa en la base de datos, podrías hacer algo como esto:
+        $imagenPublicPath = 'storage/img/' . $request->file('imagen')->getClientOriginalName();
+    
+        $programa = new Programas; // Asumiendo que el modelo se llama Programa, con "P" mayúscula
         $programa->descripcion = $request->descripcion;
         $programa->titulo = $request->titulo;
-        $programa->imagen = $imagenPath ;
+        $programa->imagen = $imagenPublicPath; // Guardando la ruta relativa
         $programa->save();
-        return redirect()->route('programas')->with('Exito!', 'El programa se ha guardado Exitosamente');
+    
+        return redirect()->route('programas')->with('Exito!', 'El programa se ha guardado exitosamente');
     }
     public function show($id)
     {

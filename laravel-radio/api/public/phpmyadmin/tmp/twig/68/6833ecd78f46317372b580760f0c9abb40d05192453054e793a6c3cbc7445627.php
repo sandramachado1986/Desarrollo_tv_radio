@@ -128,6 +128,6 @@ class __TwigTemplate_39ea829947eff86879d065c2de5e399c927b1da8098ffc8ac47574da93d
 
     public function getSourceContext()
     {
-        return new Source("", "select_lang.twig", "/var/www/html/public/phpmyadmin/templates/select_lang.twig");
+        return new Source("", "select_lang.twig", "/var/www/html/phpmyadmin/templates/select_lang.twig");
     }
 }

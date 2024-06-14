@@ -530,6 +530,6 @@ function extendingValidatorMessages () {
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/variables.twig", "/var/www/html/public/phpmyadmin/templates/javascript/variables.twig");
+        return new Source("", "javascript/variables.twig", "/var/www/html/phpmyadmin/templates/javascript/variables.twig");
     }
 }
