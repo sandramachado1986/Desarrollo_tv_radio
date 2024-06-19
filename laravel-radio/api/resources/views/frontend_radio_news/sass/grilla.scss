@@ -1,0 +1,321 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+$qty:6;
+$step: 30% / $qty;
+//$step: 360deg / $qty;
+//$step: 20% / $qty; valores cambiar "adjust-hue" por "lighten darken etc"
+
+
+@for $i from 0 through $qty - 1 {
+ nav, header,footer, section:nth-child(#{$i + 1}) {
+    background: darken(#CACACA, $step * $i);
+    //background: adjust-hue(#CACACA, $step * $i);
+  }
+}
+/*----------------------sistema de columnas NUEVO FLEX 8aDG------------------------------*/
+
+html {
+    font-size: 1em; /* 1 */
+    -webkit-text-size-adjust: 1em; /* 2 */
+    -ms-text-size-adjust: 1em; /* 2 */
+}
+
+body, html {margin:0 auto;padding:0px;}
+
+/* =============================================================================
+   Tipografia
+   ========================================================================== */
+
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+h1 {
+    font-size: 2em;
+    padding: 0.67em 0;
+
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    padding: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    padding: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    padding: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    padding: 2.33em 0;
+}
+
+
+
+section, header, footer {
+  min-height:400px;
+}
+ nav {min-height:100px}
+
+*,::before,::after {
+    box-sizing: border-box;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  align-content:flex-start;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+// guides
+.col {
+	background: rgba(152, 214, 245, 0.5);
+	outline: 1px solid rgba(152, 214, 245, .75);
+
+	span {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		min-height: 60px;
+		background: rgba(255, 255, 255, .5);
+			
+		p {		
+			text-align: left;
+			align-items:left ;
+			justify-content: flex-start;
+			margin:20px;
+
+				}
+
+			}
+}
+
+.rowfixed{
+padding:0 calc(100%/12);
+}
+
+.-centrado {
+  justify-content: center;
+}
+
+   .square-1 {height: 0; padding-bottom: calc(100%/8);}
+   .square-2 {height: 0; padding-bottom: calc(100%/7);}
+   .square-3 {height: 0; padding-bottom: calc(100%/6);}
+   .square-4 {height: 0; padding-bottom: calc(100%/5);}
+   .square-5 {height: 0; padding-bottom: calc(100%/4);}
+   .square-6 {height: 0; padding-bottom: calc(100%/3);}
+   .square-7 {height: 0; padding-bottom: calc(100%/2);}
+   .square-8 {height: 0; padding-bottom: calc(100%/1);}
+
+.swiper-container{height:550px;}
+
+
+@media (min-width: 75em) {
+._25 {
+    flex: 2.5;
+  }
+  ._75 {
+    flex: 7.5;
+  }
+  ._20 {
+    flex: 2;
+  }
+
+  ._50 {
+    flex: 5;
+  }
+    ._33 {
+    flex: 3.33;
+  }
+
+  ._66 {
+    flex: 6.66;
+  }
+  }
+
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 34em,
+	md: 48.063em,
+	lg: 62em,
+	xl: 75em
+);
+
+$uno-uno:					100%;
+$uno-dos:					100%/2;
+$uno-tres:					100%/3;
+$uno-cuatro:				100%/4;
+$uno-cinco:					100%/5;
+$uno-seis:					100%/6;
+$uno-siete:					100%/7;
+$uno-ocho:					100%/8;
+
+
+@mixin uno-uno {
+	flex-basis: $uno-uno;
+	max-width: 	$uno-uno;
+}
+
+
+@mixin uno-dos {
+	flex-basis: $uno-dos;
+	max-width: 	$uno-dos;
+}
+
+@mixin uno-tres {
+	flex-basis: $uno-tres;
+	max-width: 	$uno-tres;
+}
+
+@mixin uno-cuatro {
+	flex-basis: $uno-cuatro;
+	max-width: 	$uno-cuatro;
+}
+
+@mixin uno-cinco {
+	flex-basis: $uno-cinco;
+	max-width: 	$uno-cinco;
+}
+
+@mixin uno-seis {
+	flex-basis: $uno-seis;
+	max-width: 	$uno-seis;
+}
+
+@mixin uno-siete {
+	flex-basis: $uno-siete;
+	max-width: 	$uno-siete;
+}
+
+@mixin uno-ocho {
+	flex-basis: $uno-ocho;
+	max-width: 	$uno-ocho;
+}
+
+
+@each $size, $bp in $grid-breakpoints {
+
+	.row {
+		@media (min-width: $bp) {
+
+			&.-col-1-#{$size} > * {
+				@include uno-uno;
+			}
+
+			&.-col-2-#{$size} > * {
+				@include uno-dos;
+			}
+
+			&.-col-3-#{$size} > * {
+				@include uno-tres;
+			}
+
+			&.-col-4-#{$size} > * {
+				@include uno-cuatro;
+			}
+
+			&.-col-5-#{$size} > * {
+				@include uno-cinco;
+			}
+
+			&.-col-6-#{$size} > * {
+				@include uno-seis;
+			}
+
+			&.-col-7-#{$size} > * {
+				@include uno-siete;
+			}
+
+			&.-col-8-#{$size} > * {
+				@include uno-ocho;
+			}
+			
+		}
+	}
+}
+
+
+
+
+/*----------------------sistema de columnas 8aDG------------------------------*/

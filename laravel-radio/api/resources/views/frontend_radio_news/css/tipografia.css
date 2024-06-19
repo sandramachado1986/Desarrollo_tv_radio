@@ -1,0 +1,180 @@
+ /** 8ADG
+
+
+                                           `/shmNNNNmhs/`                                           
+                                         :hMMMMMMMMMMMMMMh:                                         
+                                       .hMMMMMMMMMMMMMMMMMMh.                                       
+                                      -mMMMMMMd+-..-+dMMMMMMm-                                      
+                                     :NMMMMMM+`      `+MMMMMMN:                                     
+                                    /NMMMMMMh          hMMMMMMN/                                    
+                                   +NMMMMMMMd          dMMMMMMMN+                                   
+                                  oMMMMMMMMMMs.      .sMMMMMMMMMMo                                  
+                                `sMMMMMMMMMMMMmy+//+ymMMMMMMMMMMMMs`                                
+                               `yMMMMMMMMMMMMMMMNmmNMMMMMMMMMMMMMMMy`                               
+                              `hMMMMMMMMMMMMNh+:-..-:+hNMMMMMMMMMMMMh`                              
+                             .dMMMMMMMMMMMMh-          -hMMMMMMMMMMMMd.                             
+                            `mMMMMMMMMMMMMs              yMMMMMMMMMMMMm`                            
+                            oMMMMMMMMMMMMN`              `NMMMMMMMMMMMMo                            
+                            dMMMMMMMMMMMMm                mMMMMMMMMMMMMd                            
+                            hMMMMMMMMMMMMM-              -MMMMMMMMMMMMMh                            
+                            /MMMMMMMMMMMMMm-            -mMMMMMMMMMMMMM/                            
+                             yMMMMMMMMMMMMMNs-        -sNMMMMMMMMMMMMMy                             
+                             `sMMMMMMMMMMMMMMNmhsooshmNMMMMMMMMMMMMMMs`                             
+                               :hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh:                               
+                                `-odmNMMMMMMMMMMMMMMMMMMMMMMMMNmdo-`                                
+                                   `.-:/+osyhhddddddddddhyyo+/-.`                                   
+                                                `````                                               
+                                                                                                    
+                                  ````     ``     `````       ````                                  
+                                .yysyh:    yds    dmmddho.  .sdmmmh+                                
+                                +N. `hd   sm-N+   mMy-/hMN.-NMs-.:hy-                               
+                                `dNydm:  /N- :N-  mMo   NMosMm :hhhhs                               
+                                hd   oM`.Ndyyydm` mMs-/yMN.-NMs:/oNMs                               
+                                -hhsyh+`hs    `hy dNmmmho`  .sdNNmh+                                
+                                  ````  `       ` `````       ````                                  
+                                                                                                    
+*/
+ 
+ html,
+ .root {
+     font-size: 18px;
+     line-height: 27px;
+     font-family: var(--font-family);
+ }
+ 
+ body,
+ .article {
+     font-family: var(--font-family);
+     font-size: 1rem;
+     /* 18px */
+     line-height: 1.5rem;
+     /* 27px */
+     margin: auto;
+ }
+ 
+ h1,
+ .h1 {
+     font-size: 2.3889rem;
+     /* 43px */
+     line-height: 3rem;
+     /* 54px */
+     margin-top: 1.5rem;
+     /* 27px */
+     margin-bottom: 3rem;
+     /* 54px */
+ }
+ 
+ h2,
+ .h2 {
+     font-size: 1.7778rem;
+     /* 32px */
+     line-height: 3rem;
+     /* 54px */
+     margin-top: 1.5rem;
+     /* 27px */
+     margin-bottom: 1.5rem;
+     /* 27px */
+ }
+ 
+ h3,
+ .h3 {
+     font-size: 1.3333rem;
+     /* 24px */
+     line-height: 1.5rem;
+     /* 27px */
+     margin-top: 1.5rem;
+     /* 27px */
+     margin-bottom: 0rem;
+     /* 0px */
+ }
+ 
+ h4,
+ .h4 {
+     font-size: 1rem;
+     /* 18px */
+     line-height: 1.5rem;
+     /* 27px */
+     margin-top: 1.5rem;
+     /* 27px */
+     margin-bottom: 0rem;
+     /* 0px */
+ }
+ 
+ h5,
+ .h5 {
+     font-size: 1rem;
+     /* 18px */
+     line-height: 1.5rem;
+     /* 27px */
+     margin-top: 1.5rem;
+     /* 27px */
+     margin-bottom: 0rem;
+     /* 0px */
+     font-weight: bold;
+ }
+ 
+ p,
+ ul,
+ ol,
+ pre,
+ small,
+ table,
+ blockquote {
+     margin-top: 0rem;
+     /* 0px */
+     margin-bottom: 1.5rem;
+     /* 27px */
+ }
+ 
+ ul ul,
+ ol ol,
+ ul ol,
+ ol ul {
+     margin-top: 0rem;
+     /* 0px */
+     margin-bottom: 0rem;
+     /* 0px */
+ }
+ /* Let's make sure all's aligned */
+ 
+ hr,
+ .hr {
+     border: 0.0556rem/* 1px */
+     solid;
+     margin: -0.0556rem 0;
+     /* -1px */
+ }
+ 
+ a,
+ b,
+ i,
+ strong,
+ em,
+ code {
+     line-height: 0;
+ }
+ 
+ sub,
+ sup {
+     line-height: 0;
+     position: relative;
+     vertical-align: baseline;
+ }
+ 
+ sup {
+     top: -0.5em;
+ }
+ 
+ sub {
+     bottom: -0.25em;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+     width: 100%!important;
+ }

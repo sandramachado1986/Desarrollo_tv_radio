@@ -1,0 +1,33 @@
+
+{
+    "videos": 
+    [
+        {
+            "titulo": "NOTICIAS CANAL UNIVERSIDAD - PROGRAMA 19",
+            "link_id": "K6oFipjSmbM",
+            "link_video": "https://www.youtube.com/watch?v=K6oFipjSmbM",
+            "link_img": "https://i.ytimg.com/vi/K6oFipjSmbM/default.jpg",
+            "reproductor": "1"
+        },
+
+        {
+            "titulo": "NOTICIAS CANAL UNIVERSIDAD - PROGRAMA 20",
+            "link_id": "K6oFipjSmbM",
+            "link_video": "https://www.youtube.com/watch?v=K6oFipjSmbM",
+            "link_img": "https://i.ytimg.com/vi/K6oFipjSmbM/default.jpg",
+            "reproductor": "1"
+        },
+
+        {
+            "titulo": "NOTICIAS CANAL UNIVERSIDAD - PROGRAMA 21",
+            "link_id": "K6oFipjSmbM",
+            "link_video": "https://www.youtube.com/watch?v=K6oFipjSmbM",
+            "link_img": "https://i.ytimg.com/vi/K6oFipjSmbM/default.jpg",
+            "reproductor": "1"
+        }
+        
+    ]
+
+}
+
+

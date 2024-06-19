@@ -1,0 +1,856 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+/* line 9, ../sass/grilla.scss */
+
+:root {
+    --altura-base: 27px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/*---------------------------| Acordeon 8aDG |--------------------------------*/
+
+
+/* line 144, ../sass/base.scss */
+
+* {
+    margin: 0;
+}
+
+
+/* line 145, ../sass/base.scss */
+
+dl {
+    margin: 48px auto;
+    width: 100%;
+}
+
+
+/* line 146, ../sass/base.scss */
+
+dt,
+dd {
+    padding: 20px;
+}
+
+
+/* line 147, ../sass/base.scss */
+
+dt {
+    background: #e8e8e8;
+    color: #0b085b;
+    cursor: pointer;
+}
+
+
+/* line 148, ../sass/base.scss */
+
+dd {
+    background: #F5F5F5;
+    display: none;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+
+/* line 149, ../sass/base.scss */
+
+dt.activo,
+dt:hover {
+    background: #eae9f9;
+    color: #0b085b;
+}
+
+
+/* line 150, ../sass/base.scss */
+
+dd:first-child {
+    display: block;
+}
+
+
+/* line 151, ../sass/base.scss */
+
+dt:before {
+    content: "▸";
+    margin-right: 10px;
+}
+
+
+/* line 152, ../sass/base.scss */
+
+dt.activo:before {
+    content: "▾";
+}
+
+
+/*---------------| BORRA RECTANGULOS A LOS LINKS MOBILE |---------------------*/
+
+a,
+a:active,
+a:focus {
+    outline: none!important;
+    -moz-outline-style: none!important;
+    text-decoration: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    and -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+
+/* line 30, ../sass/grilla.scss */
+
+article,
+aside,
+details,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+/* line 34, ../sass/grilla.scss */
+
+body {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+/* line 37, ../sass/grilla.scss */
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+/* line 40, ../sass/grilla.scss */
+
+blockquote,
+q {
+    quotes: none;
+}
+
+
+/* line 43, ../sass/grilla.scss */
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+
+/* line 48, ../sass/grilla.scss */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*----------------------sistema de columnas NUEVO FLEX 8aDG------------------------------*/
+
+
+/* line 70, ../sass/grilla.scss */
+
+html {
+    font-size: 1em;
+    /* 1 */
+    -webkit-text-size-adjust: 1em;
+    /* 2 */
+    -ms-text-size-adjust: 1em;
+    /* 2 */
+}
+
+
+/* line 76, ../sass/grilla.scss */
+
+body,
+html {
+    margin: 0 auto;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+
+
+/* line 87, ../sass/grilla.scss */
+
+
+/* line 120, ../sass/grilla.scss */
+
+section,
+header,
+footer {
+    min-height: calc( var(--altura-base) * 4);
+}
+
+
+/* line 125, ../sass/grilla.scss */
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+
+/* line 129, ../sass/grilla.scss */
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* line 134, ../sass/grilla.scss */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    /* min-height: 384px; */
+    /*padding:48px 0;*/
+}
+
+
+/* line 139, ../sass/grilla.scss */
+
+.col {
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* line 148, ../sass/grilla.scss */
+
+
+/* line 152, ../sass/grilla.scss */
+
+.col span {
+    display: flex;
+    text-align: center;
+    align-items: stretch;
+    align-content: stretch;
+    min-height: 60px;
+    //background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* line 160, ../sass/grilla.scss */
+
+.col span p {
+    text-align: left;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    margin: 24px;
+}
+
+
+/* line 171, ../sass/grilla.scss */
+
+.rowfixed {
+    padding: 0 calc(100%/12);
+}
+
+
+/* line 175, ../sass/grilla.scss */
+
+.-centrado {
+    justify-content: center;
+}
+
+
+/* line 179, ../sass/grilla.scss */
+
+.square-1 {
+    height: 0;
+    padding-bottom: calc(100%/8);
+}
+
+
+/* line 180, ../sass/grilla.scss */
+
+.square-2 {
+    height: 0;
+    padding-bottom: calc(100%/7);
+}
+
+
+/* line 181, ../sass/grilla.scss */
+
+.square-3 {
+    height: 0;
+    padding-bottom: calc(100%/6);
+}
+
+
+/* line 182, ../sass/grilla.scss */
+
+.square-4 {
+    height: 0;
+    padding-bottom: calc(100%/5);
+}
+
+
+/* line 183, ../sass/grilla.scss */
+
+.square-5 {
+    height: 0;
+    padding-bottom: calc(100%/4);
+}
+
+
+/* line 184, ../sass/grilla.scss */
+
+.square-6 {
+    height: 0;
+    padding-bottom: calc(100%/3);
+}
+
+
+/* line 185, ../sass/grilla.scss */
+
+.square-7 {
+    height: 0;
+    padding-bottom: calc(100%/2);
+}
+
+
+/* line 186, ../sass/grilla.scss */
+
+.square-8 {
+    height: 0;
+    padding-bottom: calc(100%/1);
+}
+
+
+/* line 188, ../sass/grilla.scss */
+
+@media (min-width: 75em) {
+    /* line 192, ../sass/grilla.scss */
+    ._25 {
+        flex: 2.5;
+    }
+    /* line 195, ../sass/grilla.scss */
+    ._75 {
+        flex: 7.5;
+    }
+    /* line 198, ../sass/grilla.scss */
+    ._20 {
+        flex: 2;
+    }
+    /* line 202, ../sass/grilla.scss */
+    ._50 {
+        flex: 5;
+    }
+    /* line 205, ../sass/grilla.scss */
+    ._33 {
+        flex: 3.33;
+    }
+    /* line 209, ../sass/grilla.scss */
+    ._66 {
+        flex: 6.66;
+    }
+}
+
+@media (min-width: 0) {
+    /* line 280, ../sass/grilla.scss */
+    .row .col-1 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 284, ../sass/grilla.scss */
+    .row .col-2 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 288, ../sass/grilla.scss */
+    .row .col-3 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 292, ../sass/grilla.scss */
+    .row .col-4 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 296, ../sass/grilla.scss */
+    .row .col-5 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 300/sass/grilla.scss */
+    .row .col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 304, ../sass/grilla.scss */
+    .row .col-7 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-8 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .square {
+        flex-basis: 50%;
+        max-width: 50%;
+        height: 0;
+        padding-bottom: calc(100%/2);
+    }
+    .gd {
+        display: none;
+    }
+    /* line 418, ../sass/base.scss */
+    .ch {
+        display: block !important;
+    }
+    .rowfixed {
+        padding: 0;
+    }
+
+        /* line 192, ../sass/grilla.scss */
+        ._25 {
+            width: 25vw;
+        }
+        /* line 195, ../sass/grilla.scss */
+        ._75 {
+           width: 75vw;
+        }
+}
+
+
+/*****544px******/
+
+@media (min-width: 34em) {
+    /* line 280, ../sass/grilla.scss */
+    /* line 280, ../sass/grilla.scss */
+    .row .col-1 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 284, ../sass/grilla.scss */
+    .row .col-2 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 288, ../sass/grilla.scss */
+    .row .col-3 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 292, ../sass/grilla.scss */
+    .row .col-4 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 296, ../sass/grilla.scss */
+    .row .col-5 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 300, ../sass/grilla.scss */
+    .row .col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 304, ../sass/grilla.scss */
+    .row .col-7 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-8 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    ._50 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .square {
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+        height: 0;
+        padding-bottom: calc(100%/3);
+    }
+    .gd {
+        display: none;
+    }
+    /* line 418, ../sass/base.scss */
+    .ch {
+        display: block !important;
+    }
+
+    
+}
+
+
+/*****769px******/
+
+@media (min-width: 48.063em) {
+    /* line 280, ../sass/grilla.scss */
+    .col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .col-2 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+        /*background: rgba(152, 214, 245, 0.5);
+    outline: 1px solid rgba(152, 214, 245, 0.75);*/
+    }
+    /* line 284, ../sass/grilla.scss */
+    .col-3 {
+        flex-basis: 50%;
+        max-width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: stretch;
+    }
+    /* line 288, ../sass/grilla.scss */
+    /* line 292, ../sass/grilla.scss */
+    .col-4 {
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+    /* line 296, ../sass/grilla.scss */
+    .col-5 {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    /* line 300, ../sass/grilla.scss */
+    .col-1 {
+        flex-basis: 16.66667%;
+        max-width: 16.66667%;
+    }
+    /* line 304, ../sass/grilla.scss */
+    .col-7 {
+        flex-basis: 14.28571%;
+        max-width: 14.28571%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .col-8 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .square {
+        flex-basis: 25%;
+        max-width: 25%;
+        height: 0;
+        padding-bottom: calc(100%/4);
+    }
+    .gd {
+        display: none;
+    }
+    /* line 418, ../sass/base.scss */
+    .ch {
+        display: block !important;
+    }
+}
+
+
+/*****992px******/
+
+@media (min-width: 62em) {
+    /* line 280, ../sass/grilla.scss */
+    .row .col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 284, ../sass/grilla.scss */
+    .row .col-3 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    /* line 288, ../sass/grilla.scss */
+    .row .col-2 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+        /* background: rgba(152, 214, 245, 0.5); */
+        /* outline: 1px solid rgba(152, 214, 245, 0.75); */
+    }
+    /* line 292, ../sass/grilla.scss */
+    .row .col-4 {
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+    /* line 296, ../sass/grilla.scss */
+    .row .col-5 {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    /* line 300, ../sass/grilla.scss */
+    .row .col-1 {
+        flex-basis: 16.66667%;
+        max-width: 16.66667%;
+    }
+    /* line 304, ../sass/grilla.scss */
+    .row .col-7 {
+        flex-basis: 14.28571%;
+        max-width: 14.28571%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-8 {
+        flex-basis: 12.5%;
+        max-width: 12.5%;
+    }
+    .square {
+        flex-basis: 16.66667%;
+        max-width: 16.66667%;
+        height: 0;
+        padding-bottom: calc(100%/6);
+    }
+    .rowfixed {
+        padding: 0 calc(100%/12);
+    }
+    .card_notibox {
+        padding-right: 0px!important;
+    }
+    .card_notibox:first-child {
+        padding-left: 0px!important;
+    }
+    .card_notibox:last-child {
+        padding-right: 0px!important;
+    }
+}
+
+
+/*****1200px******/
+
+@media (min-width: 75em) {
+    /* line 280, ../sass/grilla.scss */
+    .row .col-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    /* line 284, ../sass/grilla.scss */
+    .row .col-3 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    /* line 288, ../sass/grilla.scss */
+    .row .col-2 {
+        flex-basis: 33.33333%;
+        max-width: 33.33333%;
+        min-width: 33.333%;
+    }
+    /* background: rgba(152, 214, 245, 0.5); */
+    /* outline: 1px solid rgba(152, 214, 245, 0.75); */
+    /* line 292, ../sass/grilla.scss */
+    .row .col-4 {
+        flex-basis: 66.66%;
+        max-width: 66.66%;
+    }
+    /* line 296, ../sass/grilla.scss */
+    .row .col-5 {
+        flex-basis: 20%;
+        max-width: 20%;
+    }
+    /* line 300, ../sass/grilla.scss */
+    .row .col-1 {
+        flex-basis: 16.66667%;
+        max-width: 16.66667%;
+    }
+    /* line 304, ../sass/grilla.scss */
+    .row .col-7 {
+        flex-basis: 14.28571%;
+        max-width: 14.28571%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-8 {
+        flex-basis: 12.5%;
+        max-width: 12.5%;
+    }
+    /*grilla 8*/
+    .row .col-81 {
+        flex-basis: 12.5%!important;
+        max-width: 12.5%!important;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-82 {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-83 {
+        flex-basis: 37.5%;
+        max-width: 37.5%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-84 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-85 {
+        flex-basis: 62.5%;
+        max-width: 62.5%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-86 {
+        flex-basis: 75%;
+        max-width: 75%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-87 {
+        flex-basis: 87.5%;
+        max-width: 87.5%;
+    }
+    /* line 308, ../sass/grilla.scss */
+    .row .col-88 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .square {
+        height: 0;
+        padding-bottom: calc(100%/6);
+    }
+    .ch {
+        display: none!important;
+    }
+    /* line 418, ../sass/base.scss */
+    .gd {
+        display: block !important;
+    }
+    .rowfixed {
+        padding: 0 calc(100%/12);
+    }
+}
+
+
+/*----------------------sistema de columnas 8aDG------------------------------*/
+
+article {
+    margin: 0 6%;
+}
