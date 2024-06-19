@@ -1,0 +1,27 @@
+{
+    "background_color": "#062d70",
+    "description": "8aDG",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": " Canal Universidad | UNMDP ",
+    "orientation": "portrait",
+    "scope": "/",
+    "short_name": " Canal Universidad | UNMDP ",
+    "start_url": "/",
+    "theme_color": "#062d70",
+    "categories": [],
+    "screenshots": [],
+    "icons": [
+      {
+        "src": "iconos/144.jpg",
+        "type": "image/jpg",
+        "sizes": "144x144"
+      },
+      {
+        "src": "iconos/512.jpg",
+        "type": "image/jpg",
+        "sizes": "512x512"
+      }
+    ],
+    "shortcuts": []
+  }
