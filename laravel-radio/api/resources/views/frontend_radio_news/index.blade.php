@@ -61,6 +61,9 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <link rel="stylesheet" href="../resources/views/frontend_radio_news/css/normalize.css">
+        <link rel="stylesheet" href="../resources/views/frontend_radio_news/css/slide.css">
+
+
         <link rel="stylesheet" href="../resources/views/frontend_radio_news/css/grilla.css">
         <link rel="stylesheet" href="../resources/views/frontend_radio_news/css/tipografia.min.css">
         <link rel="stylesheet" href="../resources/views/frontend_radio_news/css/estilos_generales.min.css">
@@ -291,6 +294,12 @@
                 </div>
 
             </header>
+
+
+
+
+
+            
   <!-- slider o primera sección -->
             <div id="currentShowTemplate" class="current-show" style="display: none;">
                 <div class="row col-3 _left">
@@ -347,15 +356,127 @@
                     </div>
                 </div>
             </div>
-            <div class="row col-6 _center rowfixed">
-                
-
-                <div id="currentShowContainer" class="row col-6 _section_incripcion"></div>
-
-                <!-- sección varios-->
-
-                <!-- sección noticias-->
+         
+            <section>
+            <div class="slideshow-container">
+    @foreach ($programacion as $index => $item)
+    @if ($index < 5)
+    <div class="mySlides fade">
+        <div class="slide-content" style=" display: flex;">
+            <div class="sli" style="width:200px;">
+                <div class="numbertext">{{ $index + 1 }} / {{ count($programacion) }}</div>
+                <h4>{{ $item->show }} - {{ $item->day }} a {{ $item->time }}</h4>
             </div>
+            <div class="imagen" >
+                <img  src="{{ asset('' . $item->imageUrl) }}" style="width:200px;">
+                <div class="text">Caption Text</div>
+            </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    @endif
+    @endforeach
+  
+</div>
+<br>
+<div style="text-align:center">
+    @foreach ($programacion as $index => $item)
+    @if ($index < 5)
+        <span class="dot" onclick="currentSlide({{ $index + 1 }})"></span>
+    @endif
+    @endforeach
+</div>
+</section>
+
+<section>
+   <!-- footer-->
+   <footer id="footer" class="rowfixed">
+                <div class="row col-88 pie">
+                    <div>
+                        <h5>Dirección</h5>
+                        25 de Mayo 2855 - 9º piso
+                        <br>
+                        Mar del Plata | Bs As | AR
+                        <br>
+                        <a href="mailto:canal@mdp.edu.ar;">
+                            radiouniversidad@mdp.edu.ar</a><br>
+                        <a href="tel:+5490223">Móvil: +54 9 223 3052040</a>
+
+                        <h5>Producción</h5>
+                        <a href="tel:+5490223">Móvil: +54 9 223 3052040</a>
+                        <h5>Nuetras redes</h5>
+                        <div
+                            style="display: grid;grid-template-columns: repeat(3, 1fr); width:160px;color: var(--site-link);fill:var(--site-link)">
+
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                                <h1 class="_center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="43"
+                                        width="43"
+                                        viewbox="0 0 512 512"><path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                                </h1>
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                style="color: var(--site-link)">
+                                <h1 class="_center">
+                                    <i class="fab fa-facebook-square"></i>
+                                </h1>
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
+                                style="color: var(--site-link);text-decoration: none;">
+                                <h1 class="_center">
+                                    <i class="fab fa-instagram"></i>
+                                </h1>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div class="">
+                        <figure style="margin-top:27px;padding-left: 5px;">
+                            <img src="../resources/views/frontend_radio_news/img/logo-full.png" alt="logo" style="height:81px;">
+                        </figure>
+                    </div>
+                </div>
+            </footer>
+            <!-- footer-->
+</section>
+<section>
+     <!-- SUBfooter-->
+     <div class="subfooter row col-6 rowfixed">
+                <div class="col-1">
+                    <figure class="_marg-27-m" style="margin-top:27px;height: 81px;">
+                        <img src="../resources/views/frontend_radio_news/img/logo-unmdp-h.svg" alt="logo" style="height:36px;margin-top: 9px;">
+                    </figure>
+                </div>
+                <div class="col-1 _center">
+                    <small style="color:#062d70;">
+                        <br>
+                        Miembro de</small>
+                </div>
+                <div class="col-2 _center orgs">
+
+                    <img src="../resources/views/frontend_radio_news/img/renau_.png" alt="">
+                    <img src="../resources/views/frontend_radio_news/img/_cin.png" alt="">
+                    <img src="../resources/views/frontend_radio_news/img/bacua_.png" alt="">
+                </div>
+                <div class="col-2 _center">
+                    <img class="gd _marg-27" src="../resources/views/frontend_radio_news/img/sistema.png" alt="" style="height: 54px;">
+                </div>
+            </div>
+            <!-- SUBfooter-->
+</section>
 
             
             
@@ -364,20 +485,20 @@
 
         
 
-            <!-- sección varios-->
-            <!-- sección noticias-->
-              <!-- fin main-->
-            <!-- footer-->
+        
             
             </container>
     </main>          
 <!-- fin copntenedor general-> <!-- ventanas modales -->
 
     <!-- ventanas modales -->
-       <!-- menu lateral -->
+
        
     <!-- menu lateral -->
+    <script src="../resources/views/frontend_radio_news/js/slide.js"></script>
     <script src="../resources/views/frontend_radio_news/js/app.js"></script>
+
+
     <script
         src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
